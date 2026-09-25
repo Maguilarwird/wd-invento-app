@@ -1,0 +1,83 @@
+clone:
+  depth: full
+
+definitions:
+  caches:
+    trivy: ~/.cache
+
+  services:
+    docker-with-large-memory:
+      memory: 5120
+      type: docker
+
+  steps:
+    - step: &build-frontend
+        name: Build & Push Frontend
+        image: aquasec/trivy:latest
+        size: 2x
+        script:
+          - |
+            export APP=levantamientos-frontend
+            if [[ "${BITBUCKET_BRANCH}" == "main" ]]; then
+              export DOCKER_REG=${DOCKER_REG_PROD}
+              export SP_APP_ID=${SP_APP_ID_PROD}
+              export SP_PASSWD=${SP_PASSWD_PROD}
+            else
+              export DOCKER_REG=${DOCKER_REG_STAG}
+              export SP_APP_ID=${SP_APP_ID_STAG}
+              export SP_PASSWD=${SP_PASSWD_STAG}
+            fi
+
+            docker login ${DOCKER_REG} --username ${SP_APP_ID} --password ${SP_PASSWD}
+            docker build -f dockerfile.frontend -t ${DOCKER_REG}/${ORG}/${APP}:${BITBUCKET_BUILD_NUMBER} .
+            docker push ${DOCKER_REG}/${ORG}/${APP}:${BITBUCKET_BUILD_NUMBER}
+
+        services:
+          - docker-with-large-memory
+        caches:
+          - trivy
+        condition:
+          changesets:
+            includePaths:
+              - "src/**"
+              - "index.html"
+              - "vite.config.js"
+              - "tailwind.config.js"
+              - "postcss.config.js"
+
+    - step: &build-backend
+        name: Build & Push Backend
+        image: aquasec/trivy:latest
+        size: 2x
+        script:
+          - |
+            export APP=levantamientos-backend
+            if [[ "${BITBUCKET_BRANCH}" == "main" ]]; then
+              export DOCKER_REG=${DOCKER_REG_PROD}
+              export SP_APP_ID=${SP_APP_ID_PROD}
+              export SP_PASSWD=${SP_PASSWD_PROD}
+            else
+              export DOCKER_REG=${DOCKER_REG_STAG}
+              export SP_APP_ID=${SP_APP_ID_STAG}
+              export SP_PASSWD=${SP_PASSWD_STAG}
+            fi
+
+            docker login ${DOCKER_REG} --username ${SP_APP_ID} --password ${SP_PASSWD}
+            docker build -f dockerfile.backend -t ${DOCKER_REG}/${ORG}/${APP}:${BITBUCKET_BUILD_NUMBER} .
+            docker push ${DOCKER_REG}/${ORG}/${APP}:${BITBUCKET_BUILD_NUMBER}
+
+        services:
+          - docker-with-large-memory
+        caches:
+          - trivy
+        condition:
+          changesets:
+            includePaths:
+              - "server.js"
+              - "dockerfile.backend"
+
+pipelines:
+  branches:
+    main:
+      - step: *build-frontend
+      - step: *build-backend

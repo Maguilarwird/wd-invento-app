@@ -1,0 +1,1324 @@
+{
+  "Catalogo_Definiciones": {
+    "titulo": "Valores posibles por campo — Banca",
+    "descripcion": "Fuente de las listas desplegables del Maestro_Alineado (309 filas). Cada bloque incluye la definición de QUÉ es la columna y sus valores posibles con definición breve.",
+    "campos": [
+      {
+        "id": "CAMPO-01",
+        "nombre": "Industria",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 1 del mapa conceptual de Wird Cortex. Identifica el gran sector regulado en el que ocurre el journey del cliente (banca/servicios financieros o seguros), y determina qué segmentos, productos y decision flows son aplicables más abajo en la jerarquía.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Banca / Servicios Financieros",
+            "definicion": "Bancos, financieras y actores no bancarios que ofrecen crédito, cuentas o medios de pago."
+          },
+          {
+            "valor": "Seguros",
+            "definicion": "Aseguradoras y corredoras que emiten pólizas, cobran primas y gestionan siniestros."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-02",
+        "nombre": "Segmento (Wird Cortex)",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 2 del mapa conceptual. Aterriza la propuesta según el tipo de cliente, producto y complejidad operativa: permite distinguir un journey de Retail/Personas (alto volumen, canales digitales) de uno de Pyme o Empresas & Corporate (más consultivo, mayor complejidad documental).",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Retail / Personas",
+            "definicion": "Clientes individuales; productos masivos como créditos, cuentas y tarjetas."
+          },
+          {
+            "valor": "Pyme",
+            "definicion": "Pequeñas y medianas empresas; crédito pyme, cuenta pyme, factoring, leasing."
+          },
+          {
+            "valor": "Empresas & Corporate",
+            "definicion": "Grandes empresas; cash management, trade finance, crédito corporativo, derivados."
+          },
+          {
+            "valor": "Mayorista / Wholesale",
+            "definicion": "Mercado de capitales, tesorería, comercio exterior, custodia, correspondent banking."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-03",
+        "nombre": "Macro - Producto — en uso en el maestro",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 3 del mapa conceptual (agrupación superior de Producto). El journey no ocurre en abstracto: ocurre sobre un producto concreto, y el Macro-Producto agrupa productos afines (ej. \"Créditos\" agrupa Crédito Consumo, Hipotecario, CHIP y Comercial) para poder analizar volumetría a un nivel intermedio entre Segmento y Producto.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Créditos",
+            "definicion": "Financiamiento otorgado a un cliente, con o sin garantía (incluye Crédito Consumo, Hipotecario, CHIP y Crédito Comercial)."
+          },
+          {
+            "valor": "Cuentas",
+            "definicion": "Cuenta Corriente y Cuenta de Ahorro."
+          },
+          {
+            "valor": "Tarjetas",
+            "definicion": "Tarjeta de Crédito y Tarjeta de Débito."
+          },
+          {
+            "valor": "Inversiones",
+            "definicion": "DAP, Acciones y APV."
+          },
+          {
+            "valor": "Cheques",
+            "definicion": "Chequera, giro y gestión de cheques."
+          },
+          {
+            "valor": "Boleta de Garantía",
+            "definicion": "Instrumento de garantía para contratos o licitaciones."
+          },
+          {
+            "valor": "Leasing",
+            "definicion": "Arrendamiento financiero de bienes o equipos."
+          },
+          {
+            "valor": "Seguros",
+            "definicion": "Seguros contratados o asociados a productos bancarios."
+          },
+          {
+            "valor": "Beneficios y Fidelización",
+            "definicion": "Programa de puntos, descuentos y ofertas del banco."
+          },
+          {
+            "valor": "Canales Digitales",
+            "definicion": "App, Página Web y Banconexión (portal de empresas)."
+          },
+          {
+            "valor": "Seguridad y Accesos",
+            "definicion": "Claves, autenticación (PinPass, Tercera Clave) y fraude."
+          },
+          {
+            "valor": "Calidad de Atención",
+            "definicion": "Interacciones sobre el servicio recibido, no sobre un producto específico."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-04",
+        "nombre": "Macro - Producto — universo Wird Cortex adicional (no usado aún)",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 3 del mapa conceptual (agrupación superior de Producto). El journey no ocurre en abstracto: ocurre sobre un producto concreto, y el Macro-Producto agrupa productos afines (ej. \"Créditos\" agrupa Crédito Consumo, Hipotecario, CHIP y Comercial) para poder analizar volumetría a un nivel intermedio entre Segmento y Producto.",
+        "en_uso": false,
+        "valores": [
+          {
+            "valor": "Depósitos",
+            "definicion": "Depósitos a plazo o a la vista (hoy modelado dentro de Inversiones vía DAP)."
+          },
+          {
+            "valor": "Crédito Pyme",
+            "definicion": "Financiamiento dirigido a pequeñas y medianas empresas."
+          },
+          {
+            "valor": "Cuenta Pyme",
+            "definicion": "Cuentas corrientes u operativas para pymes."
+          },
+          {
+            "valor": "Medios de pago",
+            "definicion": "POS, transferencias, billeteras digitales, adquirencia."
+          },
+          {
+            "valor": "Factoring",
+            "definicion": "Venta o adelanto de facturas por cobrar."
+          },
+          {
+            "valor": "Cash management",
+            "definicion": "Gestión de flujo de caja y tesorería para empresas."
+          },
+          {
+            "valor": "Trade finance",
+            "definicion": "Financiamiento y garantías para comercio exterior."
+          },
+          {
+            "valor": "Crédito corporativo",
+            "definicion": "Financiamiento de gran monto para grandes empresas."
+          },
+          {
+            "valor": "Derivados",
+            "definicion": "Instrumentos financieros de cobertura o especulación."
+          },
+          {
+            "valor": "Banca de inversión",
+            "definicion": "Asesoría en fusiones, adquisiciones y emisión de instrumentos."
+          },
+          {
+            "valor": "Mercado de capitales",
+            "definicion": "Emisión y transacción de bonos, acciones u otros valores."
+          },
+          {
+            "valor": "Tesorería",
+            "definicion": "Gestión de liquidez, monedas y posiciones financieras."
+          },
+          {
+            "valor": "Comercio exterior",
+            "definicion": "Operaciones de importación y exportación."
+          },
+          {
+            "valor": "Custodia",
+            "definicion": "Resguardo y administración de activos financieros de terceros."
+          },
+          {
+            "valor": "Correspondent banking",
+            "definicion": "Servicios entre bancos para operar en otras plazas o monedas."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-05",
+        "nombre": "Producto — en uso en el maestro",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 3 del mapa conceptual, en su expresión más granular. Define con precisión cuál es el proceso que se quiere mejorar o medir: no es lo mismo orquestar un crédito hipotecario que una tarjeta de crédito o una cuenta corriente, porque cada producto tiene etapas, documentos, sistemas y métricas distintas.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Crédito Consumo",
+            "definicion": "Crédito de libre disposición para personas."
+          },
+          {
+            "valor": "Crédito Hipotecario",
+            "definicion": "Crédito para compra o construcción de vivienda."
+          },
+          {
+            "valor": "CHIP",
+            "definicion": "Producto de crédito hipotecario distinto de \"Crédito Hipotecario\" (confirmar definición exacta con negocio — nombre interno del banco)."
+          },
+          {
+            "valor": "Crédito Comercial",
+            "definicion": "Financiamiento para pymes o empresas."
+          },
+          {
+            "valor": "Cuenta Corriente",
+            "definicion": "Cuenta transaccional con chequera y línea asociada."
+          },
+          {
+            "valor": "Cuenta de Ahorro",
+            "definicion": "Cuenta para acumular fondos con o sin interés."
+          },
+          {
+            "valor": "Tarjeta de Crédito",
+            "definicion": "Tarjeta con cupo revolvente para compras."
+          },
+          {
+            "valor": "Tarjeta de Débito",
+            "definicion": "Tarjeta asociada a fondos propios en cuenta."
+          },
+          {
+            "valor": "DAP",
+            "definicion": "Depósito a plazo con interés pactado."
+          },
+          {
+            "valor": "Acciones",
+            "definicion": "Instrumento de inversión bursátil."
+          },
+          {
+            "valor": "APV",
+            "definicion": "Ahorro previsional voluntario con beneficios tributarios."
+          },
+          {
+            "valor": "Cheques",
+            "definicion": "Medio de pago mediante chequera asociada a la cuenta corriente."
+          },
+          {
+            "valor": "Boleta de Garantía",
+            "definicion": "Instrumento que garantiza el cumplimiento de un contrato o licitación."
+          },
+          {
+            "valor": "Leasing",
+            "definicion": "Arrendamiento financiero con o sin opción de compra."
+          },
+          {
+            "valor": "Seguros",
+            "definicion": "Pólizas contratadas directamente o asociadas a un crédito."
+          },
+          {
+            "valor": "Programa de Beneficios",
+            "definicion": "Puntos, catálogo de canje, descuentos y promociones."
+          },
+          {
+            "valor": "App",
+            "definicion": "Aplicación móvil o banca digital."
+          },
+          {
+            "valor": "Página Web",
+            "definicion": "Sitio web transaccional para personas."
+          },
+          {
+            "valor": "Banconexión (Empresas)",
+            "definicion": "Portal transaccional para clientes empresa."
+          },
+          {
+            "valor": "Claves y Autenticación",
+            "definicion": "Clave de internet, PinPass, Tercera Clave y otros factores de acceso."
+          },
+          {
+            "valor": "Fraude y Disputas",
+            "definicion": "Denuncias de uso no autorizado, phishing o transacciones no reconocidas."
+          },
+          {
+            "valor": "Atención Ejecutivo / Contact Center",
+            "definicion": "Calidad del servicio prestado por ejecutivos o banca telefónica."
+          },
+          {
+            "valor": "Atención Sucursal",
+            "definicion": "Calidad del servicio prestado presencialmente en sucursal."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-06",
+        "nombre": "Producto — sugerido, universo Wird Cortex adicional (no usado aún)",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 3 del mapa conceptual, en su expresión más granular. Define con precisión cuál es el proceso que se quiere mejorar o medir: no es lo mismo orquestar un crédito hipotecario que una tarjeta de crédito o una cuenta corriente, porque cada producto tiene etapas, documentos, sistemas y métricas distintas.",
+        "en_uso": false,
+        "valores": [
+          {
+            "valor": "Crédito Automotriz",
+            "definicion": "Crédito para compra de vehículo."
+          },
+          {
+            "valor": "Línea de Crédito / Sobregiro",
+            "definicion": "Cupo revolvente asociado a una cuenta."
+          },
+          {
+            "valor": "Crédito Educacional",
+            "definicion": "Crédito para financiar estudios."
+          },
+          {
+            "valor": "Tarjeta Prepago",
+            "definicion": "Tarjeta con saldo cargado previamente."
+          },
+          {
+            "valor": "Cuenta Vista / RUT",
+            "definicion": "Cuenta simple de bajo costo, uso masivo."
+          },
+          {
+            "valor": "Depósito a la Vista",
+            "definicion": "Depósito disponible en cualquier momento."
+          },
+          {
+            "valor": "Fondos Mutuos",
+            "definicion": "Vehículo de inversión colectiva en distintos activos."
+          },
+          {
+            "valor": "Transferencias",
+            "definicion": "Movimiento electrónico de fondos entre cuentas."
+          },
+          {
+            "valor": "Billetera Digital",
+            "definicion": "Medio de pago móvil o app."
+          },
+          {
+            "valor": "Adquirencia / POS",
+            "definicion": "Servicio de cobro con tarjeta para comercios."
+          },
+          {
+            "valor": "Línea Pyme",
+            "definicion": "Cupo de crédito revolvente para empresas pequeñas."
+          },
+          {
+            "valor": "Cuenta Corriente Pyme",
+            "definicion": "Cuenta operativa para empresas pequeñas y medianas."
+          },
+          {
+            "valor": "Factoring con/sin responsabilidad",
+            "definicion": "Adelanto de facturas con o sin traspaso del riesgo de no pago."
+          },
+          {
+            "valor": "Leasing Financiero / Operativo",
+            "definicion": "Variantes de leasing según si incluye opción de compra."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-07",
+        "nombre": "Módulo del Journey (Wird Cortex)",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 4 del mapa conceptual. Es la capa macro comercial y funcional: representa las grandes etapas del ciclo de vida del cliente o del producto (Venta/Originación, Activación, Postventa/Gestión, Cobranza, Renovación, Retención/Fidelización). No son capacidades técnicas, son etapas comerciales y operativas — la forma correcta de empaquetar la propuesta hacia el cliente. \"Cierre o Desvinculación\" es una extensión propia de este maestro, no un módulo oficial de Wird Cortex.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Venta / Originación",
+            "definicion": "Etapa donde el cliente manifiesta interés, cotiza, simula o solicita un producto."
+          },
+          {
+            "valor": "Activación",
+            "definicion": "Etapa posterior a la venta: onboarding, documentación, firma y primer uso."
+          },
+          {
+            "valor": "Postventa / Gestión",
+            "definicion": "Consultas, solicitudes, reclamos y seguimiento de productos ya activos."
+          },
+          {
+            "valor": "Cobranza",
+            "definicion": "Contacto, recuperación, promesas y acuerdos de pago de deuda vencida o próxima a vencer."
+          },
+          {
+            "valor": "Renovación",
+            "definicion": "Continuidad, actualización de condiciones y confirmación de productos o pólizas."
+          },
+          {
+            "valor": "Retención / Fidelización",
+            "definicion": "Gestión PROACTIVA para evitar que el cliente se vaya: identificación de riesgo y ofertas de retención, antes de que el cierre ocurra."
+          },
+          {
+            "valor": "Cierre o Desvinculación",
+            "definicion": "NO es un módulo oficial de Wird Cortex — extensión propia del banco. Agrupa el cierre REAL de un producto o relación."
+          },
+          {
+            "valor": "Siniestros (solo seguros — no usado en este maestro)",
+            "definicion": "Desde el aviso hasta la evaluación, liquidación y cierre de un siniestro."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-08",
+        "nombre": "Decision Flow (Wird Cortex) — lista completa (30 + 5 de Siniestros de referencia)",
+        "definicion_columna": "¿Qué es esta columna?  Nivel 5 del mapa conceptual. Un Decision Flow es un flujo de negocio configurable que combina reglas, IA, canales, datos, documentos, integraciones y participación humana para que un caso avance correctamente dentro de un módulo del journey. Cada Decision Flow responde: qué proceso resuelve, cuándo se activa, qué hace Wird, cuándo entra el humano, qué capacidades usa y qué resultado genera.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Captura de Interés",
+            "definicion": "Identifica y ordena una manifestación inicial de interés del cliente. [Venta/Originación]"
+          },
+          {
+            "valor": "Simulación / Cotización",
+            "definicion": "Guía al cliente para obtener una simulación o cotización preliminar. [Venta/Originación]"
+          },
+          {
+            "valor": "Ordenamiento y Validación",
+            "definicion": "Ordena y valida información incompleta o desordenada del cliente. [Venta/Originación]"
+          },
+          {
+            "valor": "Oferta / Propuesta",
+            "definicion": "Presenta una oferta, propuesta o alternativa comercial al cliente. [Venta/Originación]"
+          },
+          {
+            "valor": "Aceptación / Solicitud",
+            "definicion": "Captura la aceptación del cliente y formaliza la solicitud. [Venta/Originación]"
+          },
+          {
+            "valor": "Onboarding / Alta",
+            "definicion": "Guía al cliente para completar el alta de un producto o servicio. [Activación]"
+          },
+          {
+            "valor": "Validación de Identidad",
+            "definicion": "Coordina o acompaña la validación de identidad del cliente. [Activación]"
+          },
+          {
+            "valor": "Documentación",
+            "definicion": "Solicita, recibe, clasifica y controla documentos requeridos. [Activación]"
+          },
+          {
+            "valor": "Firma / Contrato",
+            "definicion": "Coordina la aceptación formal, firma de documentos o contrato. [Activación]"
+          },
+          {
+            "valor": "Activación / Primer Uso",
+            "definicion": "Asegura que el cliente use efectivamente el producto contratado. [Activación]"
+          },
+          {
+            "valor": "Consulta / Solicitud",
+            "definicion": "Recibe y entiende una consulta o requerimiento del cliente. [Postventa/Gestión]"
+          },
+          {
+            "valor": "Clasificación",
+            "definicion": "Categoriza el caso según intención, producto, urgencia y área. [Postventa/Gestión]"
+          },
+          {
+            "valor": "Gestión y Resolución",
+            "definicion": "Ejecuta una acción para resolver el caso o avanzar su solución. [Postventa/Gestión]"
+          },
+          {
+            "valor": "Seguimiento",
+            "definicion": "Asegura que un caso abierto no quede detenido. [Postventa/Gestión]"
+          },
+          {
+            "valor": "Cierre de Caso",
+            "definicion": "Confirma que el caso fue resuelto y comunica el cierre. [Postventa/Gestión; también Cierre o Desvinculación]"
+          },
+          {
+            "valor": "Segmentación",
+            "definicion": "Agrupa clientes o casos de cobranza según riesgo, deuda o prioridad. [Cobranza]"
+          },
+          {
+            "valor": "Contacto / Recordatorio",
+            "definicion": "Contacta al cliente para recordar pago o informar vencimiento. [Cobranza]"
+          },
+          {
+            "valor": "Clasificación de Respuesta",
+            "definicion": "Interpreta la respuesta del cliente frente a una gestión de cobranza. [Cobranza]"
+          },
+          {
+            "valor": "Promesa / Acuerdo",
+            "definicion": "Registra una promesa de pago o acuerdo de regularización. [Cobranza]"
+          },
+          {
+            "valor": "Seguimiento / Recuperación",
+            "definicion": "Monitorea si el cliente cumplió el acuerdo o pago comprometido. [Cobranza]"
+          },
+          {
+            "valor": "Identificación / Segmentación",
+            "definicion": "Identifica clientes o productos próximos a renovar. [Renovación]"
+          },
+          {
+            "valor": "Oferta de Renovación",
+            "definicion": "Comunica condiciones de continuidad o renovación. [Renovación]"
+          },
+          {
+            "valor": "Aceptación / Análisis",
+            "definicion": "Captura la respuesta del cliente ante una renovación. [Renovación]"
+          },
+          {
+            "valor": "Emisión / Actualización",
+            "definicion": "Actualiza condiciones, emite documentos o registra continuidad. [Renovación]"
+          },
+          {
+            "valor": "Confirmación",
+            "definicion": "Comunica al cliente que la renovación quedó completada. [Renovación]"
+          },
+          {
+            "valor": "Identificación de Riesgo",
+            "definicion": "Detecta señales de posible fuga o baja satisfacción. [Retención/Fidelización]"
+          },
+          {
+            "valor": "Oferta de Retención",
+            "definicion": "Presenta una alternativa para mantener al cliente. [Retención/Fidelización]"
+          },
+          {
+            "valor": "Gestión de Oferta",
+            "definicion": "Acompaña la conversación de retención, dudas u objeciones. [Retención/Fidelización]"
+          },
+          {
+            "valor": "Aceptación",
+            "definicion": "Registra que el cliente acepta continuar o mantener la relación. [Retención/Fidelización]"
+          },
+          {
+            "valor": "Aviso de Siniestro",
+            "definicion": "Recibe la primera notificación de un siniestro. [Siniestros - solo seguros]"
+          },
+          {
+            "valor": "Recepción / Validación",
+            "definicion": "Recibe antecedentes y valida si la información está completa. [Siniestros - solo seguros]"
+          },
+          {
+            "valor": "Evaluación / Peritaje",
+            "definicion": "Coordina la evaluación técnica o peritaje del caso. [Siniestros - solo seguros]"
+          },
+          {
+            "valor": "Liquidación / Pago",
+            "definicion": "Coordina resolución económica, autorización o pago. [Siniestros - solo seguros]"
+          },
+          {
+            "valor": "Cierre del Siniestro",
+            "definicion": "Confirma cierre, comunica resultado y registra la experiencia. [Siniestros - solo seguros]"
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-09",
+        "nombre": "Categoría",
+        "definicion_columna": "¿Qué es esta columna?  El detalle operativo más granular del maestro, por debajo del Decision Flow. Es el proceso concreto tal como lo nombraría el negocio (ej. \"Simulación/Cotización Crédito Consumo\"), y es el nivel que normalmente se usa para tipificar una conversación real.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Activación PinPass",
+            "definicion": "Cliente recibió una tarjeta nueva y necesita crear su clave PinPass para usarla en comercios y cajeros"
+          },
+          {
+            "valor": "Alzamiento CHIP",
+            "definicion": "Cliente solicita el alzamiento de la hipoteca tras terminar de pagar su crédito"
+          },
+          {
+            "valor": "Alzamiento Crédito Consumo",
+            "definicion": "Cliente solicita el alzamiento o liberación de una prenda tras terminar de pagar su crédito"
+          },
+          {
+            "valor": "Alzamiento de Hipoteca",
+            "definicion": "Cliente solicita el alzamiento o liberación de la hipoteca tras terminar de pagar su crédito hipotecario"
+          },
+          {
+            "valor": "Apertura CHIP",
+            "definicion": "Cliente desea simular un dividendo o cotizar un crédito hipotecario para comprar una vivienda"
+          },
+          {
+            "valor": "Apertura Crédito Consumo",
+            "definicion": "Cliente solicita iniciar la contratación de un crédito de consumo o libre disposición (ya decidió, quiere el producto)"
+          },
+          {
+            "valor": "Apertura Crédito Hipotecario",
+            "definicion": "Cliente solicita iniciar la contratación del crédito hipotecario (ya decidió)"
+          },
+          {
+            "valor": "Apertura Cuenta Corriente",
+            "definicion": "Cliente desea abrir una cuenta corriente o cuenta vista y consulta requisitos, planes o condiciones"
+          },
+          {
+            "valor": "Apertura Cuenta de Ahorro",
+            "definicion": "Cliente desea abrir una cuenta de ahorro y consulta requisitos, tasas o tipos disponibles (vivienda, educación, libre)"
+          },
+          {
+            "valor": "Apertura TC",
+            "definicion": "Cliente desea solicitar una tarjeta de crédito nueva, adicional o de mayor categoría, y consulta requisitos, tipos o beneficios"
+          },
+          {
+            "valor": "Apertura TD",
+            "definicion": "Cliente desea obtener una tarjeta de débito o consulta sus características y beneficios, generalmente en contexto de apertura de cuenta o cambio de ba…"
+          },
+          {
+            "valor": "Aporte/Rescate DAP",
+            "definicion": "Cliente desea rescatar su depósito a plazo antes del vencimiento por una urgencia"
+          },
+          {
+            "valor": "App Caída",
+            "definicion": "Cliente no puede abrir la app: se cierra sola, no carga o muestra caída general del servicio"
+          },
+          {
+            "valor": "Autorización Pago Cheque",
+            "definicion": "Cliente desea autorizar el pago de un cheque de monto alto para evitar su rechazo"
+          },
+          {
+            "valor": "Banconexión Funcionalidad",
+            "definicion": "Cliente reporta que una funcionalidad específica del portal empresarial Banconexión no está disponible o desapareció"
+          },
+          {
+            "valor": "Banconexión Lento",
+            "definicion": "Cliente reporta que el portal Banconexión responde con lentitud o demora excesiva"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo App",
+            "definicion": "Cliente tiene el acceso a la app bloqueado (por intentos fallidos o seguridad) y solicita desbloqueo"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo Clave Internet",
+            "definicion": "Cliente olvidó o bloqueó su clave de acceso al banco online"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo Cuenta Corriente",
+            "definicion": "Cliente reporta su cuenta corriente bloqueada y solicita desbloqueo, o pide bloquearla por seguridad"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo PinPass",
+            "definicion": "Cliente necesita activar, desbloquear o resetear la clave de 4 dígitos de su tarjeta para uso en comercios y cajeros"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo Página Web",
+            "definicion": "Cliente no puede ingresar al sitio web porque su usuario está bloqueado y solicita desbloqueo"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo TC",
+            "definicion": "Cliente reporta pérdida, robo o extravío de su tarjeta de crédito y solicita bloqueo urgente"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo TD",
+            "definicion": "Cliente reporta que su tarjeta de débito quedó retenida en cajero, perdida o bloqueada"
+          },
+          {
+            "valor": "Bloqueo/Desbloqueo Tercera Clave",
+            "definicion": "Cliente no puede autorizar operaciones porque su dispositivo de seguridad (Digipass, MiPass) está bloqueado"
+          },
+          {
+            "valor": "Cambio Número de Celular para Tercera Clave",
+            "definicion": "Cliente cambió de número de celular y no recibe los códigos SMS para confirmar transacciones"
+          },
+          {
+            "valor": "Cartola Cuenta Corriente",
+            "definicion": "Cliente necesita descargar o solicitar su cartola de movimientos o estado de cuenta"
+          },
+          {
+            "valor": "Casos de Rechazo",
+            "definicion": "Clientes reclaman que les rechazaron sus solicitudes de crédito"
+          },
+          {
+            "valor": "Catálogo",
+            "definicion": "Cliente consulta el catálogo de productos canjeables con los puntos del programa de beneficios"
+          },
+          {
+            "valor": "Certificados CHIP",
+            "definicion": "Cliente necesita un certificado que acredite el estado de su crédito hipotecario (dividendos al día, deuda vigente, etc"
+          },
+          {
+            "valor": "Certificados Crédito de Consumo",
+            "definicion": "Cliente necesita un certificado que acredite el estado de un producto bancario (deuda vigente, dividendos al día, etc"
+          },
+          {
+            "valor": "Cheque Cobrado",
+            "definicion": "Cliente necesita confirmar si un cheque que entregó ya fue cobrado o procesado"
+          },
+          {
+            "valor": "Cheque Depositado",
+            "definicion": "Cliente depositó un cheque y consulta cuándo estará disponible el saldo en su cuenta"
+          },
+          {
+            "valor": "Cheque Devuelto",
+            "definicion": "Cliente recibió un cheque que fue devuelto por firma disconforme u otro motivo formal"
+          },
+          {
+            "valor": "Cheque Protestado",
+            "definicion": "Cliente recibió un cheque devuelto por falta de fondos u otro motivo"
+          },
+          {
+            "valor": "Cierre Cuenta Corriente",
+            "definicion": "Cliente desea cerrar definitivamente su cuenta corriente o consulta el proceso y requisitos para hacerlo (señal de fuga: evaluar retención)"
+          },
+          {
+            "valor": "Cierre Cuenta de Ahorro",
+            "definicion": "Cliente desea cerrar su cuenta de ahorro y transferir el saldo a otra cuenta"
+          },
+          {
+            "valor": "Claves Cuenta Corriente",
+            "definicion": "Cliente tiene problemas para crear, cambiar o gestionar la clave de cajero u otras claves asociadas a su cuenta"
+          },
+          {
+            "valor": "Cobro CHIP",
+            "definicion": "Cliente reporta un cobro incorrecto, duplicado o inesperado en su dividendo y solicita revisión o devolución"
+          },
+          {
+            "valor": "Cobro Cuenta Corriente",
+            "definicion": "Cliente reporta un cargo, comisión o cobro del banco en su cuenta que no corresponde a su plan o cuyo origen cuestiona"
+          },
+          {
+            "valor": "Compra Acciones",
+            "definicion": "Cliente desea invertir comprando acciones a través del banco o su corredora"
+          },
+          {
+            "valor": "Compra/Venta Divisa",
+            "definicion": "Cliente desea comprar o vender divisas (dólares, euros u otras monedas) desde su cuenta corriente"
+          },
+          {
+            "valor": "Compras TC",
+            "definicion": "Cliente reporta un problema con compras propias en su tarjeta de crédito: duplicadas, mal cobradas, anuladas sin reverso o cuotas con error"
+          },
+          {
+            "valor": "Compras TD",
+            "definicion": "Cliente fue descontado en una compra pero la transacción no se completó correctamente"
+          },
+          {
+            "valor": "Consulta Seguros",
+            "definicion": "Cliente necesita información sobre seguros disponibles o coberturas de seguros asociados a sus productos, sin manifestar decisión de contratar"
+          },
+          {
+            "valor": "Contacto/Asesoría",
+            "definicion": "Cliente solicita hablar o ser contactado por su ejecutivo, pide sus datos de contacto o quiere agendar una reunión (solicitud neutra)"
+          },
+          {
+            "valor": "Contratación Seguro",
+            "definicion": "Cliente manifiesta intención de contratar un seguro o de activar uno asociado a un producto"
+          },
+          {
+            "valor": "Contratar DAP",
+            "definicion": "Cliente quiere invertir en un depósito a plazo nuevo y consulta tasas, plazos o cómo tomarlo"
+          },
+          {
+            "valor": "Cotización Leasing",
+            "definicion": "Cliente desea cotizar un leasing para un bien (vehículo, maquinaria, inmueble)"
+          },
+          {
+            "valor": "Curse CHIP",
+            "definicion": "Cliente consulta cuándo se realizará el desembolso final (curse) de su crédito hipotecario"
+          },
+          {
+            "valor": "Descuentos",
+            "definicion": "Cliente consulta descuentos vigentes en comercios pagando con tarjetas del banco"
+          },
+          {
+            "valor": "Devolución Cuenta Corriente",
+            "definicion": "Cliente realizó una compra que fue anulada por el comercio y consulta cuándo se verá reflejada la devolución en su saldo"
+          },
+          {
+            "valor": "Dificultad para Contactarse",
+            "definicion": "Cliente lleva tiempo en espera y no logra ser atendido por un ejecutivo telefónico"
+          },
+          {
+            "valor": "Emisión de Boleta de Garantía",
+            "definicion": "Cliente tiene una línea aprobada y solicita que el banco emita físicamente la boleta de garantía"
+          },
+          {
+            "valor": "Escrituración / Firma de Escritura",
+            "definicion": "Cliente fue informado que debe firmar la escritura de crédito hipotecario ante notario"
+          },
+          {
+            "valor": "Estatus de modificaciones en PAC/PAT Crédito Consumo",
+            "definicion": "Cliente consulta o reclama cambios aplicados en su PAC o PAT asociado al crédito"
+          },
+          {
+            "valor": "Estudio de títulos",
+            "definicion": "Cliente consulta el estado o resultado del estudio de títulos"
+          },
+          {
+            "valor": "Firma Documento CHIP",
+            "definicion": "Cliente fue informado que debe firmar la escritura u otro documento legal asociado a su crédito hipotecario"
+          },
+          {
+            "valor": "Firma Documento Crédito de Consumo",
+            "definicion": "Cliente fue informado que debe firmar un contrato, escritura u otro documento legal"
+          },
+          {
+            "valor": "Firma de Documento Boleta de Garantía",
+            "definicion": "Cliente necesita firmar documentos asociados a la emisión de una boleta de garantía"
+          },
+          {
+            "valor": "Fraude Cuenta Corriente",
+            "definicion": "Cliente denuncia transferencias o giros no autorizados, estafas, phishing o accesos de terceros a su cuenta"
+          },
+          {
+            "valor": "Fraude Tarjeta TC/TD",
+            "definicion": "Cliente denuncia uso no autorizado, clonación o compras desconocidas en su tarjeta de crédito o débito"
+          },
+          {
+            "valor": "Mal Funcionamiento App",
+            "definicion": "Cliente puede ingresar pero la app presenta errores, información desactualizada o funciones que fallan"
+          },
+          {
+            "valor": "Mal Funcionamiento Página Web",
+            "definicion": "Cliente reporta que el sitio web del banco presenta errores inesperados o comportamiento anormal"
+          },
+          {
+            "valor": "Mala Atención",
+            "definicion": "Cliente reclama que su ejecutivo no responde, no soluciona lo prometido o lo atendió mal"
+          },
+          {
+            "valor": "Mala Atención Sucursal",
+            "definicion": "Cliente reporta haber recibido un trato descortés o deficiente en una sucursal del banco"
+          },
+          {
+            "valor": "No Llega Tercera Clave",
+            "definicion": "Cliente está esperando el código SMS para autorizar una operación y no le llega"
+          },
+          {
+            "valor": "No se puede descargar Cartola Página Web",
+            "definicion": "Cliente tiene problemas técnicos para descargar su cartola desde el portal web del banco"
+          },
+          {
+            "valor": "Obtención Boleta de Garantía",
+            "definicion": "Cliente desea retirar físicamente una boleta de garantía ya emitida"
+          },
+          {
+            "valor": "Ofertas/Promociones",
+            "definicion": "Cliente desea información de productos o servicios financieros en promoción, sin especificar uno en particular, o recibió una campaña (avance en efect…"
+          },
+          {
+            "valor": "Orden de No Pago",
+            "definicion": "Cliente reporta robo o pérdida de su chequera y solicita bloqueo de los folios"
+          },
+          {
+            "valor": "Orden de pago Cuenta Corriente",
+            "definicion": "Cliente emitió una instrucción de pago al extranjero u otro destino y consulta si ya fue procesada"
+          },
+          {
+            "valor": "Otros Boleta de Garantía",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros CHIP",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros Cheques",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros Clave de internet",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros Crédito Comercial",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros Cuenta Corriente",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros Cuenta de Ahorro",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros DAP",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros PinPass",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "Otros Tercera Clave",
+            "definicion": "Usar solo si ninguna otra subcategoría del producto aplica"
+          },
+          {
+            "valor": "PAC Cuenta Corriente",
+            "definicion": "Cliente reporta un problema con un pago automático descontado desde su cuenta corriente que no se aplicó correctamente"
+          },
+          {
+            "valor": "PAC/PAT CHIP",
+            "definicion": "Cliente desea activar el descuento automático del dividendo desde su cuenta corriente"
+          },
+          {
+            "valor": "PAC/PAT Crédito Consumo",
+            "definicion": "Cliente desea activar, modificar o eliminar el pago automático de su cuota de crédito de consumo"
+          },
+          {
+            "valor": "PAC/PAT Crédito Hipotecario",
+            "definicion": "Cliente desea activar, modificar o eliminar el pago automático del dividendo de su crédito hipotecario"
+          },
+          {
+            "valor": "Pago CHIP",
+            "definicion": "Cliente desea pagar su dividendo hipotecario o consulta medios y fechas de pago"
+          },
+          {
+            "valor": "Pago Cuota Crédito Consumo",
+            "definicion": "Cliente necesita pagar la cuota mensual de su crédito de consumo, no encuentra cómo hacerlo o consulta vencimientos y medios de pago"
+          },
+          {
+            "valor": "Pago Dividendo Crédito Hipotecario",
+            "definicion": "Cliente necesita pagar el dividendo mensual de su crédito hipotecario, consulta vencimientos y medios de pago"
+          },
+          {
+            "valor": "Pagos TC",
+            "definicion": "Cliente necesita pagar su tarjeta de crédito, verificar un pago realizado o reporta que el cupo no se actualizó tras pagar"
+          },
+          {
+            "valor": "Poca Resolutividad",
+            "definicion": "Cliente fue atendido por banca telefónica pero su consulta o problema no fue resuelto"
+          },
+          {
+            "valor": "Portabilidad CHIP",
+            "definicion": "Cliente tiene un crédito hipotecario en otro banco y quiere traerlo para mejorar tasa o plazo"
+          },
+          {
+            "valor": "Portabilidad Crédito Consumo",
+            "definicion": "Cliente tiene un crédito de consumo en otra institución y quiere traerlo a este banco para mejorar condiciones"
+          },
+          {
+            "valor": "Portabilidad Crédito Hipotecario",
+            "definicion": "Cliente tiene un crédito hipotecario en otra institución y quiere traerlo a este banco para mejorar condiciones"
+          },
+          {
+            "valor": "Portabilidad Cuenta Corriente",
+            "definicion": "Cliente desea cambiarse de banco trasladando su cuenta corriente y productos asociados"
+          },
+          {
+            "valor": "Pre-Aprobación CHIP",
+            "definicion": "Cliente solicitó una evaluación hipotecaria y consulta el estado, vigencia o uso de su pre-aprobación"
+          },
+          {
+            "valor": "Pre-Aprobación Crédito Consumo",
+            "definicion": "Cliente recibió o vio una oferta de crédito pre-aprobado y quiere activarla o entenderla"
+          },
+          {
+            "valor": "Pre-Aprobación Crédito Hipotecario",
+            "definicion": "Cliente recibió o vio una oferta de crédito hipotecario pre-aprobado y quiere activarla o entenderla"
+          },
+          {
+            "valor": "Prepago CHIP",
+            "definicion": "Cliente desea amortizar capital de su hipoteca para reducir cuota o plazo, o pagar el total, y consulta condiciones o comisión"
+          },
+          {
+            "valor": "Prepago Crédito Consumo",
+            "definicion": "Cliente desea pagar anticipadamente el total o parte de su crédito de consumo, o consulta comisión y monto de liquidación"
+          },
+          {
+            "valor": "Prepago Crédito Hipotecario",
+            "definicion": "Cliente desea pagar anticipadamente el total o parte de su crédito hipotecario, o consulta comisión y monto de liquidación"
+          },
+          {
+            "valor": "Problema Transferencia Página Web",
+            "definicion": "Cliente intentó transferir desde el portal web pero el sistema falla en el proceso (no envía código, error al confirmar, no permite agregar destinatar…"
+          },
+          {
+            "valor": "Problemas Ingreso App",
+            "definicion": "Cliente no puede iniciar sesión en la app a pesar de tener credenciales correctas y sin mensaje de bloqueo"
+          },
+          {
+            "valor": "Problemas Página Web",
+            "definicion": "Cliente experimenta errores o lentitud generales al operar en el sitio web de personas"
+          },
+          {
+            "valor": "Problemas Transferencia App",
+            "definicion": "Cliente intentó realizar una transferencia desde la App pero la sesión se cerró y no sabe si el dinero salió"
+          },
+          {
+            "valor": "Problemas al Comprar/Pagar PinPass",
+            "definicion": "Cliente experimenta errores recurrentes al intentar pagar en comercios con su tarjeta"
+          },
+          {
+            "valor": "Problemas con Claves App",
+            "definicion": "Cliente no puede configurar o usar los métodos de autenticación de la app (biometría, FaceID, clave de ingreso)"
+          },
+          {
+            "valor": "Problemas con Claves Página Web",
+            "definicion": "Cliente no puede ingresar o usar su clave en el portal por fallas del teclado virtual u otros elementos de autenticación"
+          },
+          {
+            "valor": "Problemas de Ingreso App",
+            "definicion": "Cliente no puede iniciar sesión en la app a pesar de tener credenciales correctas y sin mensaje de bloqueo"
+          },
+          {
+            "valor": "Problemas de Ingreso Página Web",
+            "definicion": "Cliente ingresa credenciales correctas pero el portal no le permite acceder, sin mensaje de bloqueo"
+          },
+          {
+            "valor": "Problemas de Pago App",
+            "definicion": "Cliente no puede completar un pago desde la App porque el botón no responde o la función falla"
+          },
+          {
+            "valor": "Página Web Caída",
+            "definicion": "Cliente no puede acceder al sitio web del banco: error de conexión o caída general del servicio"
+          },
+          {
+            "valor": "Recuperar Clave Internet",
+            "definicion": "Cliente no recuerda su clave de acceso al banco online y necesita crear una nueva"
+          },
+          {
+            "valor": "Renovación DAP",
+            "definicion": "Cliente desea que su depósito a plazo se renueve automáticamente al vencer"
+          },
+          {
+            "valor": "Renovación/Prórroga Boleta de Garantía",
+            "definicion": "Cliente necesita extender la fecha de vencimiento de una boleta de garantía vigente"
+          },
+          {
+            "valor": "Reprogramación CHIP",
+            "definicion": "Cliente necesita solicitar meses de gracia o reprogramar su dividendo hipotecario"
+          },
+          {
+            "valor": "Reprogramación Crédito Consumo",
+            "definicion": "Cliente con dificultades económicas solicita reprogramar, renegociar o pedir meses de gracia en su crédito de consumo"
+          },
+          {
+            "valor": "Reprogramación Crédito Hipotecario",
+            "definicion": "Cliente con dificultades económicas solicita reprogramar, renegociar o pedir meses de gracia en su crédito hipotecario"
+          },
+          {
+            "valor": "Resetear PinPass",
+            "definicion": "Cliente no recuerda su clave de 4 dígitos para cajeros y necesita restablecerla"
+          },
+          {
+            "valor": "Retiro/Giro Ahorro",
+            "definicion": "Cliente desea retirar o girar dinero desde su cuenta de ahorro, o consulta cómo, dónde y cuánto puede girar"
+          },
+          {
+            "valor": "Saldo Ahorro",
+            "definicion": "Cliente consulta el saldo, los intereses ganados o los movimientos de su cuenta de ahorro"
+          },
+          {
+            "valor": "Saldos/Movimientos Cuenta Corriente",
+            "definicion": "Cliente necesita información sobre su saldo o el detalle/origen de una transacción de su cartola, sin denunciar uso por terceros"
+          },
+          {
+            "valor": "Seguros Asociados (Desgravamen / Incendio)",
+            "definicion": "Cliente consulta condiciones, cobertura o costo del seguro de desgravamen o incendio asociado a su crédito hipotecario"
+          },
+          {
+            "valor": "Simulación Boleta de Garantía",
+            "definicion": "Cliente desea conocer costo, comisión, plazos o condiciones para emitir una boleta de garantía (cotización, aún sin solicitar emisión)"
+          },
+          {
+            "valor": "Simulación/Cotización CHIP",
+            "definicion": "Cliente desea simular un dividendo o cotizar condiciones de un crédito hipotecario"
+          },
+          {
+            "valor": "Simulación/Cotización Crédito Consumo",
+            "definicion": "Cliente desea simular cuotas o cotizar un crédito de consumo antes de decidir"
+          },
+          {
+            "valor": "Simulación/Cotización Crédito Hipotecario",
+            "definicion": "Cliente desea simular dividendo o cotizar un crédito hipotecario antes de decidir"
+          },
+          {
+            "valor": "Sobregiro",
+            "definicion": "Cliente consulta las condiciones, intereses o disponibilidad de su cupo de sobregiro"
+          },
+          {
+            "valor": "Solicitar Información de Crédito Consumo",
+            "definicion": "Cliente quiere conocer tasas, plazos, CAE o condiciones del crédito"
+          },
+          {
+            "valor": "Solicitar Información de Crédito Hipotecario",
+            "definicion": "Cliente quiere conocer tasas, plazos, CAE, dividendo o condiciones del crédito hipotecario"
+          },
+          {
+            "valor": "Solicitud APV",
+            "definicion": "Cliente desea contratar un plan de Ahorro Previsional Voluntario para complementar su pensión futura"
+          },
+          {
+            "valor": "Solicitud Chequera/Talonario",
+            "definicion": "Cliente desea solicitar una nueva chequera porque se agotaron sus cheques"
+          },
+          {
+            "valor": "Solicitud documentos Crédito Consumo",
+            "definicion": "Cliente solicita certificado de pago, boleta o cartolas de las cuotas pagadas y monto que falta por pagar"
+          },
+          {
+            "valor": "Solicitud documentos Crédito Hipotecario",
+            "definicion": "Cliente solicita certificado de dividendos pagados, liquidación de deuda, copia de escritura, certificado de deuda hipotecaria o cartola de pagos"
+          },
+          {
+            "valor": "Tasación Propiedad",
+            "definicion": "Cliente consulta el estado o resultado de la tasación de la propiedad que está financiando"
+          },
+          {
+            "valor": "Transferencia Cuenta Corriente",
+            "definicion": "Cliente reporta un problema con una transferencia propia (rechazada, no llega al destinatario, destinatario no habilitado) o consulta su estado"
+          },
+          {
+            "valor": "Transferencia Cuenta de Ahorro",
+            "definicion": "Cliente desea programar o realizar una transferencia desde su cuenta corriente hacia su cuenta de ahorro"
+          },
+          {
+            "valor": "Validación de documentación",
+            "definicion": "Cliente envía documentos solicitados por el ejecutivo"
+          },
+          {
+            "valor": "Venta Acciones",
+            "definicion": "Cliente desea vender acciones que tiene en custodia en el banco y abonar el monto a su cuenta corriente"
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-10",
+        "nombre": "Tipo de Interacción",
+        "definicion_columna": "¿Qué es esta columna?  Describe la naturaleza de la interacción del cliente dentro de un mismo Categoría (Solicitud/Consulta, Reclamo, Fuga, etc.). Un mismo proceso puede tener varias filas —una por Tipo de Interacción— porque el Módulo del Journey, la Capacidad de Wird y la urgencia cambian según si el cliente solo pregunta, reclama, o está por irse.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Solicitud/Consulta",
+            "definicion": "Cliente pide información o realiza una consulta simple."
+          },
+          {
+            "valor": "Reclamo",
+            "definicion": "Cliente expresa disconformidad porque algo no se resolvió o no se cumplió."
+          },
+          {
+            "valor": "Asesoramiento/Seguimiento",
+            "definicion": "Cliente pide apoyo para decidir o conocer el estado de un caso."
+          },
+          {
+            "valor": "Errores de producto",
+            "definicion": "Cliente reporta una falla técnica u operativa al usar el producto o canal."
+          },
+          {
+            "valor": "Fuga",
+            "definicion": "Cliente manifiesta intención de irse, no continuar o preferir otra institución."
+          },
+          {
+            "valor": "Interno/Notificación/Comunicados",
+            "definicion": "Comunicación informativa que no requiere acción del cliente."
+          },
+          {
+            "valor": "Consulta de Estado",
+            "definicion": "Cliente pregunta puntualmente en qué va su trámite o solicitud."
+          },
+          {
+            "valor": "Cancelación/Baja",
+            "definicion": "Cliente solicita cerrar, cancelar o dar de baja un producto."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-11",
+        "nombre": "Etapa Comercial (derivada)",
+        "definicion_columna": "¿Qué es esta columna?  Roll-up simplificado a dos valores (Venta / Post Venta), calculado automáticamente a partir del Módulo del Journey de cada fila. Sirve para reportar volumetría al directorio sin exponer las 7 categorías completas del Módulo.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Venta",
+            "definicion": "Corresponde a los módulos Venta/Originación y Activación."
+          },
+          {
+            "valor": "Post Venta",
+            "definicion": "Corresponde a Postventa/Gestión, Cobranza, Renovación, Retención/Fidelización y Cierre o Desvinculación."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-12",
+        "nombre": "Área Responsable",
+        "definicion_columna": "¿Qué es esta columna?  Equipo interno del banco que gestionaría el caso si no lo resuelve la IA de Wird. No es un concepto del mapa Wird Cortex — es un campo operativo propio del maestro para poder cuantificar carga de trabajo por equipo.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Comercial",
+            "definicion": "Equipo a cargo de ventas, originación y ofertas comerciales."
+          },
+          {
+            "valor": "Servicio a Cliente",
+            "definicion": "Equipo a cargo de consultas, reclamos, postventa y cierres."
+          },
+          {
+            "valor": "Soporte y Operaciones",
+            "definicion": "Equipo a cargo de procesos operativos, documentación, canales digitales y seguridad de acceso."
+          },
+          {
+            "valor": "Recaudación",
+            "definicion": "Equipo a cargo de cobranza y recuperación de pagos."
+          },
+          {
+            "valor": "Riesgo",
+            "definicion": "Equipo a cargo de evaluación crediticia, prevención de fraude y control de riesgo. (sugerido, no usado aún)"
+          },
+          {
+            "valor": "Legal y Cumplimiento",
+            "definicion": "Equipo a cargo de aspectos contractuales, normativos y regulatorios. (sugerido, no usado aún)"
+          },
+          {
+            "valor": "Marketing",
+            "definicion": "Equipo a cargo de campañas, ofertas y comunicación comercial. (sugerido, no usado aún)"
+          },
+          {
+            "valor": "Tecnología / TI",
+            "definicion": "Equipo a cargo de sistemas, integraciones y soporte técnico. (sugerido, no usado aún)"
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-13",
+        "nombre": "Adjuntos",
+        "definicion_columna": "¿Qué es esta columna?  Indica si el Categoría típicamente requiere que el cliente envíe o reciba un documento (SI) o si es una gestión puramente conversacional (NO). Se relaciona con la capacidad de \"Procesamiento de archivos\" y \"Emisión de archivos\" de Wird Cortex.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "SI",
+            "definicion": "El caso típicamente incluye documentos o archivos adjuntos."
+          },
+          {
+            "valor": "NO",
+            "definicion": "El caso típicamente no requiere adjuntos."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-14",
+        "nombre": "Capacidad de Plataforma (Wird Cortex) — valores individuales (el maestro combina varios separados por \";\")",
+        "definicion_columna": "¿Qué es esta columna?  Nivel de \"capacidades de plataforma\" del mapa conceptual: son los bloques reutilizables (habilitadores transversales) que hacen posible la orquestación de un Decision Flow — no son módulos comerciales ni productos por sí solos, se activan y combinan dentro de cada caso. Este campo dice qué capacidad(es) de Wird resuelven o apoyan cada combinación de Categoría × Tipo de Interacción.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Core / Clasificación IA",
+            "definicion": "Entiende intención, producto, urgencia y etapa de cada interacción."
+          },
+          {
+            "valor": "Priorización",
+            "definicion": "Ordena casos según SLA, riesgo, valor o urgencia."
+          },
+          {
+            "valor": "Distribución",
+            "definicion": "Asigna el caso al equipo, sistema o persona correcta."
+          },
+          {
+            "valor": "Resolución automática",
+            "definicion": "Resuelve o responde casos simples según reglas y contexto."
+          },
+          {
+            "valor": "Seguimiento proactivo",
+            "definicion": "Activa recordatorios y alertas para que el caso no quede detenido."
+          },
+          {
+            "valor": "Segmentación dinámica",
+            "definicion": "Agrupa clientes o carteras según comportamiento, riesgo o valor."
+          },
+          {
+            "valor": "Gestión 360 de datos",
+            "definicion": "Extrae, actualiza y sincroniza datos desde múltiples sistemas."
+          },
+          {
+            "valor": "Procesamiento de archivos",
+            "definicion": "Lee, valida y extrae información de documentos y adjuntos."
+          },
+          {
+            "valor": "Emisión de archivos",
+            "definicion": "Genera y envía documentos, cartas, certificados o reportes."
+          },
+          {
+            "valor": "Integraciones y orquestación",
+            "definicion": "Conecta sistemas, APIs, canales, LLMs y core bancario/seguros."
+          },
+          {
+            "valor": "Memoria multicanal",
+            "definicion": "Mantiene contexto unificado entre canales e interacciones."
+          },
+          {
+            "valor": "Analytics y reportería",
+            "definicion": "Entrega métricas, dashboards y análisis de desempeño."
+          },
+          {
+            "valor": "Gobernanza e IA responsable",
+            "definicion": "Aplica políticas, auditoría, trazabilidad y control de riesgos de IA."
+          },
+          {
+            "valor": "No aplica",
+            "definicion": "El caso no requiere ninguna capacidad de IA de Wird (ej. proceso 100% manual)."
+          }
+        ]
+      },
+      {
+        "id": "CAMPO-15",
+        "nombre": "Sentimiento",
+        "definicion_columna": "¿Qué es esta columna?  Capa de \"Canales\" del mapa conceptual: dónde ocurre la interacción (email, WhatsApp, voz, etc.). Deliberadamente NO vive como columna en el Maestro_Alineado — vive en la base de conversaciones (tabla de hechos), para no duplicar las filas del maestro por cada canal nuevo que se agregue.",
+        "en_uso": true,
+        "valores": [
+          {
+            "valor": "Positivo",
+            "definicion": "Cliente conforme, agradecido o satisfecho con la interacción."
+          },
+          {
+            "valor": "Neutro",
+            "definicion": "Interacción informativa o transaccional, sin carga emocional relevante."
+          },
+          {
+            "valor": "Negativo",
+            "definicion": "Cliente molesto, frustrado o disconforme con el servicio o producto."
+          },
+          {
+            "valor": "Canal (referencia — vive en la base de conversaciones, no en el maestro)",
+            "definicion": "Definición"
+          },
+          {
+            "valor": "Email",
+            "definicion": "Correo electrónico entrante o saliente."
+          },
+          {
+            "valor": "WhatsApp",
+            "definicion": "Mensajería instantánea vía WhatsApp Business."
+          },
+          {
+            "valor": "Web Chat",
+            "definicion": "Chat en vivo o chatbot dentro del sitio web."
+          },
+          {
+            "valor": "SMS / RCS",
+            "definicion": "Mensajes de texto cortos o RCS."
+          },
+          {
+            "valor": "Voz inbound / outbound",
+            "definicion": "Llamadas telefónicas recibidas o realizadas."
+          },
+          {
+            "valor": "Redes sociales",
+            "definicion": "Interacción vía redes sociales (comentarios, DMs)."
+          },
+          {
+            "valor": "App / banca digital",
+            "definicion": "Interacción dentro de la aplicación móvil o banca en línea."
+          },
+          {
+            "valor": "Portal / web",
+            "definicion": "Formularios o gestiones vía sitio web o portal transaccional."
+          },
+          {
+            "valor": "Sucursales",
+            "definicion": "Atención presencial en sucursal."
+          },
+          {
+            "valor": "Contact center",
+            "definicion": "Interacción gestionada por el contact center (multicanal)."
+          },
+          {
+            "valor": "Agentes / corredores",
+            "definicion": "Interacción a través de un agente o corredor externo."
+          }
+        ]
+      }
+    ]
+  }
+}

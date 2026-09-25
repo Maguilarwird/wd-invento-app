@@ -1,0 +1,46 @@
+{
+    "CLUSTERING_1": {
+        "CORREO": {
+            "PROMPT": "Extrae las temáticas de los siguientes correos de un cliente a su ejecutivo de {0}, pueden ser tantas temáticas como estimes convenientes, estas tienen que ser muy breves y tratar de que comienzen con un verbo que explicite la razon del comunicado. Ej: 'Problema de acceso a la plataforma', 'Solicitud de crédito hipotecario', etc...\n Correos: {1}",
+            "FUNC": {
+                "DESC": "Extrae una lista tematicas",
+                "ARRAY_DESC": "Lista de tematicas de correos",
+                "STRING_DESC": "Nombre de la tematica del correo"
+            }
+        },
+        "RRSS": {
+            "PROMPT": "Extrae las temáticas de los siguientes tweets de clientes {0}, pueden ser tantas temáticas como estimes convenientes, estas tienen que ser muy breves y tratar de que comienzen con un verbo que explicite la razon del comunicado. Ej: 'Problema de acceso a la plataforma', 'Reclamo por mala atencion', etc...\n Tweets: {1}",
+            "FUNC": {
+                "DESC": "Extrae una lista tematicas",
+                "ARRAY_DESC": "Lista de tematicas de tweets",
+                "STRING_DESC": "Nombre de la tematica del tweet"
+            }
+        },
+        "ENCUESTA": {
+            "PROMPT": "Extrae las temáticas de las siguiente respuestas de clientes a una encuesta realizada por {0}, pueden ser tantas temáticas como estimes convenientes, estas tienen que ser muy breves. Ej: 'Mala atencion', 'Buen servicio al cliente', etc...\n Respuestas: {1}",
+            "FUNC": {
+                "DESC": "Extrae una lista tematicas",
+                "ARRAY_DESC": "Lista de tematicas de la respuesta del cliente a la encuesta",
+                "STRING_DESC": "Nombre de la tematica de la respuesta del cliente a la encuesta"
+            }
+        },
+        "AUDIO": {
+            "PROMPT": "Extrae las temáticas de los siguientes resúmenes de llamadas de clientes al call center de {0}, pueden ser tantas temáticas como estimes convenientes, estas tienen que ser muy breves y tratar de que comienzen con un verbo que explicite la razón del llamado. Ej: 'Reportar robo de tarjeta', 'Solicitar bloqueo de cuenta', etc...\n Resúmenes de llamadas: {1}",
+            "FUNC": {
+                "DESC": "Extrae una lista de tematicas",
+                "ARRAY_DESC": "Lista de tematicas de resúmenes de llamadas",
+                "STRING_DESC": "Nombre de la tematica del resumen de llamada"
+            }
+        }
+    },
+    "ENTITIES_1": {
+        "CORREO": {
+            "PROMPT": "Extrae los datos que entregan los cliente o que solicitan los ejecutivos de {0} para resolver casos, pueden ser tantos datos como hayan en los correos. Ejemplo de datos entregados por clientes: 'Nombre', 'Dirección', 'Comuna', 'Numero de Cliente', 'Numero de Telefono', etc...\n Correos: {1}",
+            "FUNC": {
+                "DESC": "Extrae una lista de datos",
+                "ARRAY_DESC": "Lista de entidades de datos",
+                "STRING_DESC": "Nombre del dato en el correo"
+            }
+        }
+    }
+}

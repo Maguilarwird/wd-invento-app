@@ -1,0 +1,57 @@
+/* app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+.App {
+  @apply bg-[#f6f6fb] min-h-screen flex flex-col font-sans;
+}
+
+.App-header {
+  @apply bg-[#171433] p-4;
+}
+
+.navbar {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply h-10 mr-4;
+}
+
+.app-title {
+  @apply text-[#22eda3] text-xl md:text-2xl m-0;
+}
+
+.main-container {
+  @apply flex flex-row p-5 gap-5;
+}
+
+.transcript-panel {
+  @apply flex-1 flex flex-col gap-3;
+}
+
+.transcript-box {
+  @apply bg-white border border-gray-300 p-4 h-80 overflow-y-auto text-base leading-relaxed rounded-md;
+}
+
+.reset-button {
+  @apply bg-[#22eda3] text-[#171433] border-none px-4 py-2 text-sm md:text-base rounded cursor-pointer font-bold transition duration-200 hover:bg-[#18b77d];
+}
+
+.sidebar {
+  @apply flex-1 bg-white border border-gray-300 rounded-md p-4;
+}
+
+.sidebar h2 {
+  @apply mt-0 text-[#171433];
+}
+
+.checkbox-container {
+  @apply mb-3;
+}
+
+.checkbox-container input[type="checkbox"] {
+  @apply mr-2;
+}

@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "nombre": "Base de Conocimiento — Fricciones",
+    "version": "1.0",
+    "fuente": "Fricciones.xlsx (Hoja 1)",
+    "descripcion": "Taxonomía de fricciones detectables en interacciones de clientes (canal email). Cada entrada describe una fricción concreta y la señal observable que permite identificarla en una conversación.",
+    "uso": "Referencia para clasificación/detección de fricciones por LLM y para reportería de calidad de atención.",
+    "totales": {
+      "macro_fricciones": 7,
+      "fricciones": 19
+    },
+    "esquema": {
+      "macro_fricciones": [
+        "id",
+        "codigo",
+        "nombre",
+        "n_fricciones"
+      ],
+      "fricciones": [
+        "id",
+        "macro_friccion_id (FK)",
+        "macro_friccion",
+        "nombre",
+        "senal_detectable",
+        "terminos_literales"
+      ]
+    }
+  },
+  "macro_fricciones": [
+    {
+      "id": "MF-01",
+      "codigo": "CC",
+      "nombre": "Continuidad y contexto",
+      "n_fricciones": 4
+    },
+    {
+      "id": "MF-02",
+      "codigo": "EC",
+      "nombre": "Expectativas del cliente",
+      "n_fricciones": 4
+    },
+    {
+      "id": "MF-03",
+      "codigo": "RO",
+      "nombre": "Ruido Operacional",
+      "n_fricciones": 2
+    },
+    {
+      "id": "MF-04",
+      "codigo": "CR",
+      "nombre": "Claridad y requisitos",
+      "n_fricciones": 1
+    },
+    {
+      "id": "MF-05",
+      "codigo": "PL",
+      "nombre": "Proceso y lógica de negocio",
+      "n_fricciones": 4
+    },
+    {
+      "id": "MF-06",
+      "codigo": "RC",
+      "nombre": "Riesgo (churn/reputacional)",
+      "n_fricciones": 3
+    },
+    {
+      "id": "MF-07",
+      "codigo": "CC2",
+      "nombre": "Capacidad de Contactabilidad",
+      "n_fricciones": 1
+    }
+  ],
+  "fricciones": [
+    {
+      "id": "FR-CC-01",
+      "macro_friccion_id": "MF-01",
+      "macro_friccion": "Continuidad y contexto",
+      "nombre": "Información ya entregada en un canal, solicitada de nuevo en mismo o diferente canal",
+      "senal_detectable": "Cliente reenvía o referencia datos que ya había compartido en el mismo hilo",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-CC-02",
+      "macro_friccion_id": "MF-01",
+      "macro_friccion": "Continuidad y contexto",
+      "nombre": "Reapertura de un caso ya cerrado",
+      "senal_detectable": "Mismo hilo retoma una solicitud después de una confirmación o cierre previo",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-CC-03",
+      "macro_friccion_id": "MF-01",
+      "macro_friccion": "Continuidad y contexto",
+      "nombre": "Fragmentación entre ejecutivos sin dueño único",
+      "senal_detectable": "Reenvíos internos en cadena (Fwd/RV, \"te canalizo\") sin responsable final claro",
+      "terminos_literales": [
+        "te canalizo"
+      ]
+    },
+    {
+      "id": "FR-CC-04",
+      "macro_friccion_id": "MF-01",
+      "macro_friccion": "Continuidad y contexto",
+      "nombre": "Recolección de documentos fraccionada",
+      "senal_detectable": "Un mismo requerimiento se completa en 3+ correos sucesivos en vez de uno",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-EC-01",
+      "macro_friccion_id": "MF-02",
+      "macro_friccion": "Expectativas del cliente",
+      "nombre": "Respuesta plantilla sin avance real",
+      "senal_detectable": "Texto de \"estamos trabajando en su solicitud\" repetido sin dato nuevo entre envíos",
+      "terminos_literales": [
+        "estamos trabajando en su solicitud"
+      ]
+    },
+    {
+      "id": "FR-EC-02",
+      "macro_friccion_id": "MF-02",
+      "macro_friccion": "Expectativas del cliente",
+      "nombre": "Silencio operativo / cliente fuerza el seguimiento",
+      "senal_detectable": "Cliente envía 2+ correos de seguimiento sin respuesta intermedia",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-EC-03",
+      "macro_friccion_id": "MF-02",
+      "macro_friccion": "Expectativas del cliente",
+      "nombre": "Derivación a otra área sin cierre confirmado",
+      "senal_detectable": "Caso \"escalado al área correspondiente\" sin fecha ni confirmación posterior de resolución",
+      "terminos_literales": [
+        "escalado al área correspondiente"
+      ]
+    },
+    {
+      "id": "FR-EC-04",
+      "macro_friccion_id": "MF-02",
+      "macro_friccion": "Expectativas del cliente",
+      "nombre": "Contacto por otro canal fallido no resuelto",
+      "senal_detectable": "Intento de comunicación por otro canal documentado como fallido, sin protocolo claro de reintento",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-RO-01",
+      "macro_friccion_id": "MF-03",
+      "macro_friccion": "Ruido Operacional",
+      "nombre": "Rechazo por límite técnico del canal",
+      "senal_detectable": "Rebote automático del sistema de correo por dirección incorrecta, tamaño o formato",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-RO-02",
+      "macro_friccion_id": "MF-03",
+      "macro_friccion": "Ruido Operacional",
+      "nombre": "Ruido promocional en bandeja operativa",
+      "senal_detectable": "Correos de marketing/spam mezclados en la bandeja de gestión",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-CR-01",
+      "macro_friccion_id": "MF-04",
+      "macro_friccion": "Claridad y requisitos",
+      "nombre": "Requisito ambiguo que genera ida y vuelta",
+      "senal_detectable": "Cliente pregunta cómo cumplir un requisito antes de poder completarlo",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-PL-01",
+      "macro_friccion_id": "MF-05",
+      "macro_friccion": "Proceso y lógica de negocio",
+      "nombre": "Información contradictoria entre agentes/mensajes",
+      "senal_detectable": "Dos respuestas distintas sobre la misma regla de negocio, según quién atiende el caso",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-PL-02",
+      "macro_friccion_id": "MF-05",
+      "macro_friccion": "Proceso y lógica de negocio",
+      "nombre": "Caso mal enrutado / mal clasificado en el sistema de cliente",
+      "senal_detectable": "El caso se ingresa a un sistema bajo una categoría o evento incorrecto y se cierra automáticamente sin gestión real",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-PL-03",
+      "macro_friccion_id": "MF-05",
+      "macro_friccion": "Proceso y lógica de negocio",
+      "nombre": "Ausencia de proceso definido para excepciones",
+      "senal_detectable": "Un caso que no encaja en el flujo estándar se resuelve negociando de forma ad hoc por correo, sin un proceso de excepción documentado",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-PL-04",
+      "macro_friccion_id": "MF-05",
+      "macro_friccion": "Proceso y lógica de negocio",
+      "nombre": "Requisitos comunicados de forma incremental",
+      "senal_detectable": "El checklist completo no se entrega desde el inicio; el cliente se entera de nuevos requisitos sobre la marcha",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-RC-01",
+      "macro_friccion_id": "MF-06",
+      "macro_friccion": "Riesgo (churn/reputacional)",
+      "nombre": "Presión del cliente por incumplimiento percibido de tiempo",
+      "senal_detectable": "Lenguaje de urgencia creciente dentro del mismo hilo (\"urgente\", \"necesito hoy\")",
+      "terminos_literales": [
+        "urgente",
+        "necesito hoy"
+      ]
+    },
+    {
+      "id": "FR-RC-02",
+      "macro_friccion_id": "MF-06",
+      "macro_friccion": "Riesgo (churn/reputacional)",
+      "nombre": "Amenaza de escalamiento interno o solicitud de atención por otro ejecutivo",
+      "senal_detectable": "Mención explícita de escalación con superiores o solicitud de cambio de ejecutivo",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-RC-03",
+      "macro_friccion_id": "MF-06",
+      "macro_friccion": "Riesgo (churn/reputacional)",
+      "nombre": "Amenaza de escalamiento regulatorio o público",
+      "senal_detectable": "Mención explícita de organismos reguladores o redes sociales como siguiente paso",
+      "terminos_literales": []
+    },
+    {
+      "id": "FR-CC2-01",
+      "macro_friccion_id": "MF-07",
+      "macro_friccion": "Capacidad de Contactabilidad",
+      "nombre": "Campañas de MTK sin seguimiento proactivo del ejecutivo hacia el cliente",
+      "senal_detectable": "Correos con oferta sin respuesta del cliente que no tienen seguimiento proactivo del cliente",
+      "terminos_literales": []
+    }
+  ],
+  "indices": {
+    "por_macro_friccion": {
+      "MF-01": [
+        "FR-CC-01",
+        "FR-CC-02",
+        "FR-CC-03",
+        "FR-CC-04"
+      ],
+      "MF-02": [
+        "FR-EC-01",
+        "FR-EC-02",
+        "FR-EC-03",
+        "FR-EC-04"
+      ],
+      "MF-03": [
+        "FR-RO-01",
+        "FR-RO-02"
+      ],
+      "MF-04": [
+        "FR-CR-01"
+      ],
+      "MF-05": [
+        "FR-PL-01",
+        "FR-PL-02",
+        "FR-PL-03",
+        "FR-PL-04"
+      ],
+      "MF-06": [
+        "FR-RC-01",
+        "FR-RC-02",
+        "FR-RC-03"
+      ],
+      "MF-07": [
+        "FR-CC2-01"
+      ]
+    },
+    "por_id": {
+      "FR-CC-01": "Información ya entregada en un canal, solicitada de nuevo en mismo o diferente canal",
+      "FR-CC-02": "Reapertura de un caso ya cerrado",
+      "FR-CC-03": "Fragmentación entre ejecutivos sin dueño único",
+      "FR-CC-04": "Recolección de documentos fraccionada",
+      "FR-EC-01": "Respuesta plantilla sin avance real",
+      "FR-EC-02": "Silencio operativo / cliente fuerza el seguimiento",
+      "FR-EC-03": "Derivación a otra área sin cierre confirmado",
+      "FR-EC-04": "Contacto por otro canal fallido no resuelto",
+      "FR-RO-01": "Rechazo por límite técnico del canal",
+      "FR-RO-02": "Ruido promocional en bandeja operativa",
+      "FR-CR-01": "Requisito ambiguo que genera ida y vuelta",
+      "FR-PL-01": "Información contradictoria entre agentes/mensajes",
+      "FR-PL-02": "Caso mal enrutado / mal clasificado en el sistema de cliente",
+      "FR-PL-03": "Ausencia de proceso definido para excepciones",
+      "FR-PL-04": "Requisitos comunicados de forma incremental",
+      "FR-RC-01": "Presión del cliente por incumplimiento percibido de tiempo",
+      "FR-RC-02": "Amenaza de escalamiento interno o solicitud de atención por otro ejecutivo",
+      "FR-RC-03": "Amenaza de escalamiento regulatorio o público",
+      "FR-CC2-01": "Campañas de MTK sin seguimiento proactivo del ejecutivo hacia el cliente"
+    }
+  }
+}

@@ -1,0 +1,1533 @@
+{
+  "Catalogo_Exclusiones": {
+    "origenes": [
+      {
+        "id": "ORI-001",
+        "nombre": "Sistema / No-cliente"
+      },
+      {
+        "id": "ORI-002",
+        "nombre": "Confirmación aislada"
+      }
+    ],
+    "categorias": [
+      {
+        "id": "CAT-001",
+        "nombre": "Acuso de lectura",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-002",
+        "nombre": "Cambio de dato de contacto",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-003",
+        "nombre": "Comunicación masiva (interna)",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-004",
+        "nombre": "Confirmación / OKG",
+        "origen_id": "ORI-002"
+      },
+      {
+        "id": "CAT-005",
+        "nombre": "Confirmación / OKG",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-006",
+        "nombre": "Contacto ya no disponible",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-007",
+        "nombre": "Encuesta (proveedor)",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-008",
+        "nombre": "Evento de calendario",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-009",
+        "nombre": "Evento de calendario (teams, google meet, zoom)",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-010",
+        "nombre": "Evento social interno",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-011",
+        "nombre": "Fuera de oficina / OOO",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-012",
+        "nombre": "Institucional (Caja Los Andes)",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-013",
+        "nombre": "Marketing / fidelización",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-014",
+        "nombre": "Marketing / phishing genérico",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-015",
+        "nombre": "Marketing / promo",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-016",
+        "nombre": "No-reply",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-017",
+        "nombre": "Notificación",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-018",
+        "nombre": "Notificación",
+        "origen_id": "ORI-002"
+      },
+      {
+        "id": "CAT-019",
+        "nombre": "Proveedor / tercero",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-020",
+        "nombre": "Rebote / fallo de entrega",
+        "origen_id": "ORI-001"
+      },
+      {
+        "id": "CAT-021",
+        "nombre": "Spam",
+        "origen_id": "ORI-001"
+      }
+    ],
+    "registros": [
+      {
+        "id": "REG-0001",
+        "categoria_id": "CAT-001",
+        "texto_contenido": "mensaje leido",
+        "definicion": "Confirmación automática de lectura del mensaje.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0002",
+        "categoria_id": "CAT-001",
+        "texto_contenido": "your message was read",
+        "definicion": "Confirmación automática de lectura del mensaje.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Read receipt (inglés)."
+      },
+      {
+        "id": "REG-0003",
+        "categoria_id": "CAT-001",
+        "texto_contenido": "read",
+        "definicion": "Confirmación automática de lectura del mensaje.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0004",
+        "categoria_id": "CAT-001",
+        "texto_contenido": "read on",
+        "definicion": "Confirmación automática de lectura del mensaje.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0005",
+        "categoria_id": "CAT-002",
+        "texto_contenido": "aviso de cambio de casilla",
+        "definicion": "Aviso de cambio de casilla, dominio o canal de contacto del emisor.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0006",
+        "categoria_id": "CAT-002",
+        "texto_contenido": "mi/el/su correo ahora/nuevo es",
+        "definicion": "Aviso de cambio de casilla, dominio o canal de contacto del emisor.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0007",
+        "categoria_id": "CAT-003",
+        "texto_contenido": "feriado legal",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0008",
+        "categoria_id": "CAT-003",
+        "texto_contenido": "tips para evitar estafas / informativo phishing",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0009",
+        "categoria_id": "CAT-003",
+        "texto_contenido": "cursos e-learning",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0010",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "acepto ok",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0011",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "aprobado/autorizo/conforme/aceptado",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0012",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "de acuerdo",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0013",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "de favor ok",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0014",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "está/estoy ok",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0015",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "favor proceder",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto). En hilo puede ser una instrucción de operación (alta señal); por eso el match aislado es crítico."
+      },
+      {
+        "id": "REG-0016",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "ok a instrucción",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto). En hilo puede ser una instrucción de operación (alta señal); por eso el match aislado es crítico."
+      },
+      {
+        "id": "REG-0017",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "ok/gracias",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0018",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "reacted to message",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0019",
+        "categoria_id": "CAT-004",
+        "texto_contenido": "va ahí/aquí",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0020",
+        "categoria_id": "CAT-005",
+        "texto_contenido": "gracias por gestión",
+        "definicion": "Mensaje de cortesía o saludo, sin contenido operacional.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0021",
+        "categoria_id": "CAT-005",
+        "texto_contenido": "saludo de navidad/fiestas patrias/cumpleaños",
+        "definicion": "Paso de evaluación o suscripción de un seguro (visita/cita médica, tasación).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0022",
+        "categoria_id": "CAT-006",
+        "texto_contenido": "no trabajar con nosotros",
+        "definicion": "El contacto dejó la organización; la dirección queda obsoleta.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Contacto obsoleto."
+      },
+      {
+        "id": "REG-0023",
+        "categoria_id": "CAT-007",
+        "texto_contenido": "encuesta dimacofi/cadem/Pulso ciudadano/Adimark",
+        "definicion": "Comunicación de un proveedor o tercero.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0024",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "invitación:",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Fragmento de invitación (.ics)."
+      },
+      {
+        "id": "REG-0025",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "aceptar este evento",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Señal de agendamiento (idioma variable: fr/pt/es)."
+      },
+      {
+        "id": "REG-0026",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "aceptar invitación",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0027",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "evento cancelado",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Cancelación = riesgo de caída de gestión. Revisar si se trata de cliente"
+      },
+      {
+        "id": "REG-0028",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "evento/invitación",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0029",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "aceito reunion",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Señal de agendamiento (idioma variable: fr/pt/es)."
+      },
+      {
+        "id": "REG-0030",
+        "categoria_id": "CAT-008",
+        "texto_contenido": "declined",
+        "definicion": "Invitación, aceptación o cancelación de una reunión.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0031",
+        "categoria_id": "CAT-009",
+        "texto_contenido": "aceptada reunión",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Relevante en banca, revisar si viene contenido adicional"
+      },
+      {
+        "id": "REG-0032",
+        "categoria_id": "CAT-010",
+        "texto_contenido": "happy hour",
+        "definicion": "Invitación o comunicación social interna.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Comunicación interna, sin relación con el cliente."
+      },
+      {
+        "id": "REG-0033",
+        "categoria_id": "CAT-010",
+        "texto_contenido": "invitación a fiesta",
+        "definicion": "Invitación o comunicación social interna.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0034",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "de vacaciones",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0035",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "en ausencia | copiar correo",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Si es un ejecutivo, señal de re-ruteo."
+      },
+      {
+        "id": "REG-0036",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "encontrar de vacaciones",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0037",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "encuentro de vacaciones | respuesta automática",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0038",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "estar ausente",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0039",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "estar de vacaciones",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0040",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "estaré ausente | desde/hasta fecha",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Si es un ejecutivo, señal de re-ruteo."
+      },
+      {
+        "id": "REG-0041",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "fuera de oficina",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Si es un ejecutivo, señal de re-ruteo."
+      },
+      {
+        "id": "REG-0042",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "fuera de oficina | respuesta automática",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Si es un ejecutivo, señal de re-ruteo."
+      },
+      {
+        "id": "REG-0043",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "maternity leave",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Ausencia prolongada."
+      },
+      {
+        "id": "REG-0044",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "out of office",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0045",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "por vacaciones",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0046",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "uso de vacaciones",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0047",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "encuentrar ooo hasta",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Si es un ejecutivo, señal de re-ruteo."
+      },
+      {
+        "id": "REG-0048",
+        "categoria_id": "CAT-011",
+        "texto_contenido": "estar/encontrar con licencia",
+        "definicion": "Respuesta automática de ausencia del emisor (vacaciones, licencia, fuera de oficina).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0049",
+        "categoria_id": "CAT-012",
+        "texto_contenido": "caja | andes/araucana/los heroes",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0050",
+        "categoria_id": "CAT-013",
+        "texto_contenido": "adicional | latam | pass",
+        "definicion": "Comunicación de un programa de beneficios o puntos.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0051",
+        "categoria_id": "CAT-013",
+        "texto_contenido": "canjear | millas",
+        "definicion": "Comunicación de un programa de beneficios o puntos.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Siempre que sea en contexto personal, correo personal y no de negocio"
+      },
+      {
+        "id": "REG-0052",
+        "categoria_id": "CAT-013",
+        "texto_contenido": "disfruta beneficios tarjeta | canjear",
+        "definicion": "Comunicación de un programa de beneficios o puntos.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Invitación de sistema/seguridad (TopSafe)."
+      },
+      {
+        "id": "REG-0053",
+        "categoria_id": "CAT-014",
+        "texto_contenido": "hacer clic aquí",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Siempre que sea en contexto personal, correo personal y no de negocio"
+      },
+      {
+        "id": "REG-0054",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "app | enel",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Siempre que sea en contexto personal, correo personal y no de negocio"
+      },
+      {
+        "id": "REG-0055",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "tu avance",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Siempre que sea en contexto personal, correo personal y no de negocio"
+      },
+      {
+        "id": "REG-0056",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "con descuento",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0057",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "cupones | ahorro",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Patrón ambiguo; también aparece en spam. Considerar siempre que se trate de links maliciosos y no de instituciones reales"
+      },
+      {
+        "id": "REG-0058",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "cyber | control",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Siempre que se trate de correo personal, no negocio."
+      },
+      {
+        "id": "REG-0059",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "dcto adicional",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0060",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "de concurso",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0061",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "descuento | bancoestado",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0062",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "regalarte",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0063",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "te extrañamos",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0064",
+        "categoria_id": "CAT-015",
+        "texto_contenido": "cotiza en isapre",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0065",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "\"favor no responder\"",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0066",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "automatic | reply",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Solo si es campaña entrante."
+      },
+      {
+        "id": "REG-0067",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "correo | enviado/generado automáticamente",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0068",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "email ha sido generado de manera automática",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0069",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "Este e-mail es generado de manera automatica",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0070",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "generar de manera automática",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0071",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "no responder a este correo",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0072",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "respuesta automática",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0073",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "rogar no responder",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0074",
+        "categoria_id": "CAT-016",
+        "texto_contenido": "ser generado de manera automática",
+        "definicion": "Correo desde una casilla no monitoreada; indica no responder.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0075",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "dejar de prestar servicio",
+        "definicion": "Correo de origen no-cliente identificado por este patrón.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Posible señal de fuga. Revisar."
+      },
+      {
+        "id": "REG-0076",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "visita médica",
+        "definicion": "Respuesta a solicitud enviada a institución médica (trámite personal).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0077",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "cita | médica",
+        "definicion": "Respuesta a solicitud enviada a institución médica (trámite personal).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Genérico."
+      },
+      {
+        "id": "REG-0078",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "invitation | topsafe",
+        "definicion": "Notificación o artefacto generado por un sistema o herramienta.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0079",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "dirección | uchile",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0080",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "huella de carbono",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Palabra que también aparece en correos de valor → excluir SOLO si viene aislada (sin otro verbo ni texto)."
+      },
+      {
+        "id": "REG-0081",
+        "categoria_id": "CAT-018",
+        "texto_contenido": "reaccionó a",
+        "definicion": "Acuse breve del cliente sin contenido nuevo (p. ej. 'ok', 'de acuerdo', 'procede').",
+        "condicion_match": "Solo aislado",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Estado de cuenta AFP. Informativo. Solo si es correo entrante."
+      },
+      {
+        "id": "REG-0082",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "cartola | afp | capital",
+        "definicion": "Correo de origen no-cliente identificado por este patrón.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0083",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "caducar acceso",
+        "definicion": "Aviso relacionado con acceso o credenciales.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0084",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "confirmación de reserva",
+        "definicion": "Correo de origen no-cliente identificado por este patrón.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Puede ser cita con ejecutivo."
+      },
+      {
+        "id": "REG-0085",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "tu ingreso para banco puntos",
+        "definicion": "Comunicación de un programa de beneficios o puntos.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Solo si es campaña entrante."
+      },
+      {
+        "id": "REG-0086",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "ha realizado comentario sobre",
+        "definicion": "Notificación automática de una plataforma o red social.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Notificación de red social / plataforma."
+      },
+      {
+        "id": "REG-0087",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "notificaciones nuevas",
+        "definicion": "Notificación automática de una plataforma o red social.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0088",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "no será redirigido",
+        "definicion": "Notificación o artefacto generado por un sistema o herramienta.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0089",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "mesa de ayuda",
+        "definicion": "Notificación de mesa de ayuda o soporte.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Revisar: podría traer ticket/estado."
+      },
+      {
+        "id": "REG-0090",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "myq documento escaneado",
+        "definicion": "Aviso de que un documento fue recibido, escaneado o compartido.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Notificación de escáner corporativo."
+      },
+      {
+        "id": "REG-0091",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "recepción de documentos electrónicos",
+        "definicion": "Aviso de que un documento fue recibido, escaneado o compartido.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0092",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "se enviar archivo | wetransfer",
+        "definicion": "Aviso de que un documento fue recibido, escaneado o compartido.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": "Entrega de documento vía enlace externo."
+      },
+      {
+        "id": "REG-0093",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "control de cambio | minuta",
+        "definicion": "Notificación de un proceso interno de la organización.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0094",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "aviso de envío | dinero",
+        "definicion": "Aviso automático de una operación ejecutada (transferencia, pago, comprobante).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0095",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "comprobante de pago",
+        "definicion": "Aviso automático de una operación ejecutada (transferencia, pago, comprobante).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0096",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "comprobante de transferencia",
+        "definicion": "Aviso automático de una operación ejecutada (transferencia, pago, comprobante).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0097",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "transferencia a terceros",
+        "definicion": "Aviso automático de una operación ejecutada (transferencia, pago, comprobante).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0098",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "transferencia electrónica de fondos",
+        "definicion": "Aviso automático de una operación ejecutada (transferencia, pago, comprobante).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0099",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "Tu transferencia de fondos ha sido realizada con exito",
+        "definicion": "Aviso automático de una operación ejecutada (transferencia, pago, comprobante).",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Confirmación de transacción. Inerte salvo que el cliente la reenvíe con consulta."
+      },
+      {
+        "id": "REG-0100",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "deshabilitar para comunicación",
+        "definicion": "El destinatario deshabilita un canal de comunicación.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0101",
+        "categoria_id": "CAT-017",
+        "texto_contenido": "santander fx daily view",
+        "definicion": "Comunicación masiva o informativa, sin acción individual.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Comunicación de proveedor externo."
+      },
+      {
+        "id": "REG-0102",
+        "categoria_id": "CAT-019",
+        "texto_contenido": "wholemeaning/Wird",
+        "definicion": "Comunicación de un proveedor o tercero.",
+        "condicion_match": "Remitente / dominio",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": "Ejemplo directo de la recomendación del jefe: no botar, aporta contactabilidad."
+      },
+      {
+        "id": "REG-0103",
+        "categoria_id": "CAT-020",
+        "texto_contenido": "delivery status notification",
+        "definicion": "Aviso de que el correo o archivo no pudo entregarse.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0104",
+        "categoria_id": "CAT-020",
+        "texto_contenido": "no haber sido posible | enviar archivo",
+        "definicion": "Aviso de que el correo o archivo no pudo entregarse.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0105",
+        "categoria_id": "CAT-020",
+        "texto_contenido": "no se pudo | entregar | mensaje",
+        "definicion": "Aviso de que el correo o archivo no pudo entregarse.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0106",
+        "categoria_id": "CAT-020",
+        "texto_contenido": "no se puede entregar",
+        "definicion": "Aviso de que el correo o archivo no pudo entregarse.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0107",
+        "categoria_id": "CAT-020",
+        "texto_contenido": "no ser posible enviar archivo",
+        "definicion": "Aviso de que el correo o archivo no pudo entregarse.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "Sí",
+        "tratamiento": "Etiquetar – accionable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0108",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "disfunción eréctil",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0109",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "jesús | iglesia",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0110",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "scams",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0111",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "aprovechar | descuento",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0112",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "canjea | entradas | gratis",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0113",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "conoce la oportunidad aquí",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0114",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "descuento increible",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0115",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "email marketing",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0116",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "emarketer",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0117",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "gran oportunidad | servicio gratuito",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0118",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "mailist",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0119",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "nos patrocinar",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0120",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "oferta para viaje",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0121",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "pinche aquí",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0122",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "please click",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0123",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "precio imperdible",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0124",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "seminario online | registrar",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0125",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "spam",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0126",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "spam | cloud security",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0127",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "utiliza este enlace",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0128",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "utilizar este enlace",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0129",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "visítanos | online",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0130",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "participar por",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0131",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "casayauto.com",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Remitente / dominio",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0132",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "casaideas",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0133",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "desear seguir recibir mensajes",
+        "definicion": "El destinatario deshabilita un canal de comunicación.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0134",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "eliminar suscripción",
+        "definicion": "El destinatario deshabilita un canal de comunicación.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0135",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "no desear recibir tipo mensaje",
+        "definicion": "El destinatario deshabilita un canal de comunicación.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0136",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "no desear seguir recibiendo mensajes",
+        "definicion": "El destinatario deshabilita un canal de comunicación.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0137",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "unsubscribe",
+        "definicion": "El destinatario deshabilita un canal de comunicación.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0138",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "publicitarios",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0139",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "respuesta | publicidad",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0140",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "respuesta | publicidad | ig",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      },
+      {
+        "id": "REG-0141",
+        "categoria_id": "CAT-021",
+        "texto_contenido": "spot | publicitario",
+        "definicion": "Correo promocional o no solicitado, sin relación con una gestión del cliente.",
+        "condicion_match": "Frase contenida",
+        "trae_senal_accionable": "No",
+        "tratamiento": "Etiquetar – ignorable",
+        "indicacion_generativa": null
+      }
+    ]
+  }
+}

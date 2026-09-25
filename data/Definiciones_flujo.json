@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "nombre": "Base de Conocimiento — Definiciones del Flujo",
+    "version": "1.0",
+    "fuente": "Definiciones.xlsx (Hoja 1)",
+    "descripcion": "Diccionario de las dimensiones usadas para clasificar oportunidades comerciales a partir de hilos de correo: origen de la conversación, tipo de apertura, estado de gestión y desenlace. Cada campo incluye su definición y sus valores posibles.",
+    "uso": "Referencia para clasificación por LLM y para reportería de funnel comercial.",
+    "totales": {
+      "secciones": 2,
+      "campos": 4,
+      "valores": 25
+    },
+    "esquema": {
+      "campos": [
+        "id",
+        "orden",
+        "nombre",
+        "seccion",
+        "definicion_campo",
+        "columnas_definicion",
+        "n_valores",
+        "valores"
+      ],
+      "valores": [
+        "valor",
+        "definicion",
+        "definicion_ia"
+      ]
+    },
+    "notas_fuente": [
+      "La sección 'Fujo + IA' aparece así en el Excel (posible typo de 'Flujo + IA'); se preserva literal.",
+      "El valor 'Outbond' aparece así en el Excel (posible typo de 'Outbound'); se preserva literal.",
+      "El campo 'Origen_conversación' declara una columna 'Definición IA' que está vacía en la fuente.",
+      "La definición del campo 'Desenlace' está duplicada en la fuente; se conserva una sola vez."
+    ]
+  },
+  "campos": [
+    {
+      "id": "CAMPO-01",
+      "orden": 1,
+      "nombre": "Origen_conversación",
+      "seccion": "Flujo",
+      "definicion_campo": null,
+      "columnas_definicion": [
+        "Definición Flujo",
+        "Definición IA"
+      ],
+      "valores": [
+        {
+          "valor": "Inbound",
+          "definicion": "Cliente inicia la conversación. Primer correo es Is_Sent = false",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Outbond",
+          "definicion": "Ejecutivo inicia conversación. Primer correos es Is_Sent = true",
+          "definicion_ia": null
+        }
+      ],
+      "n_valores": 2
+    },
+    {
+      "id": "CAMPO-02",
+      "orden": 2,
+      "nombre": "Tipo Apertura",
+      "seccion": "Fujo + IA",
+      "definicion_campo": "¿Qué ocurre en el primer correo de la conversación?",
+      "columnas_definicion": [
+        "Definición IA"
+      ],
+      "valores": [
+        {
+          "valor": "Persecución de demanda",
+          "definicion": "Ejecutivo pide documentos, retomas post-llamada, envíos de simulación o propuesta y seguimientos de solicitud. Ejemplos: “De acuerdo a lo conversado le dejo mi correo, quedo a la orden.” · “Para continuar con su solicitud, favor adjuntar su última liquidación y cédula.” · “Le dejo la simulación del crédito que conversamos.”",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Campañas de marketing",
+          "definicion": "Primer correo masivo o semi-masivo sin gestión previa del cliente: ofertas preaprobadas, campañas de tasa, presentaciones de ejecutivo y compra de cartera genérica.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Cuerpo vacío / solo adjuntos",
+          "definicion": "Correo del ejecutivo cuyo cuerpo contiene solo la firma institucional; el contenido comercial viaja en archivos adjuntos (simulaciones o propuestas en PDF). Es inclasificable por texto y se declara como categoría propia en lugar de forzar su tipificación.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Inbound frío (conversación nueva)",
+          "definicion": "El cliente escribe primero e inicia una conversación completa a la vista, sin responder a ningún contacto previo: solicitudes espontáneas, envíos de documentación por iniciativa propia, consultas de factibilidad. Es el origen que mejor convierte del funnel: uno de cada dos avanza a caso comercial",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Inbound continuación de conversación previa",
+          "definicion": "El cliente escribe primero pero continúa una gestión anterior: responde a un correo cuya cabeza no fue capturada por la extracción o retoma una oportunidad previa. Se distingue del inbound frío porque no inicia demanda nueva.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "El cliente nunca respondió al correo del banco",
+          "definicion": "Cliente jamás contestó dentro de la ventana de 30 días: el hilo se compone únicamente de correos del banco, sin un segundo intento estructurado tras el silencio.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "No Aplica",
+          "definicion": "Ninguna de las anteriores definidas.",
+          "definicion_ia": null
+        }
+      ],
+      "n_valores": 7
+    },
+    {
+      "id": "CAMPO-03",
+      "orden": 3,
+      "nombre": "Gestión",
+      "seccion": "Fujo + IA",
+      "definicion_campo": "La conversación se vuelve caso comercial: hay documentos, simulación activa o evaluación en curso. Las dos compuertas de la fase: que el cliente participe (conversación neta) y que la conversación llegue a gestión real (caso comercial activo). Aquí ocurren las caídas de apertura (la conversación no llegó a caso) y las de gestión documental (el caso existía y se abandonó).",
+      "columnas_definicion": [
+        "Definición"
+      ],
+      "valores": [
+        {
+          "valor": "Conversación neta (el cliente participa)",
+          "definicion": "Oportunidad donde ambos lados hablaron al menos una vez dentro de la ventana: el cliente respondió al banco o el banco respondió al cliente. Es el denominador de la apertura (40% de la base del mes).",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Caso comercial activo (entra a gestión documental)",
+          "definicion": "Conversación bilateral que entró a gestión real: pedido o entrega de documentos, simulación activa o evaluación en curso. Es la población viva sobre la que se mide el desenlace (32% de la base del mes).",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Cliente escribió y nadie respondió (huérfana)",
+          "definicion": "Correo o correos del cliente sin una sola respuesta del ejecutivo dentro de la ventana. Es demanda espontánea ignorada, la caída más cara por unidad del funnel: el cliente ya había levantado la mano y nadie la tomó.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Intercambio tibio, murió sin abrir caso",
+          "definicion": "Hubo conversación entre ambos lados pero nunca llegó a gestión comercial real: preguntas y respuestas que se extinguen antes de que existan documentos, simulación activa o evaluación.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Cotizó y nadie activó el paso siguiente",
+          "definicion": "Hubo simulación o cotización entregada y ningún paso posterior de ninguno de los dos lados: ni el banco activó el proceso ni el cliente volvió. La demanda quedó cotizada y sin activar.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Caso abierto que se apagó sin entrega",
+          "definicion": "Gestión iniciada que se extinguió antes de los documentos, sin señal terminal de ningún tipo: sin rechazo, sin declinación y sin entrega. El intercambio simplemente dejó de ocurrir.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Entregó documentos y nadie respondió jamás",
+          "definicion": "La entrega de documentación del cliente es literalmente el último correo del hilo: no hubo acuse, ni faltante, ni resultado, ni una línea de cortesía. Es el abandono más indefendible del funnel; el emisor del último correo está verificado al 100% (siempre el cliente).",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Le pidieron un faltante y no volvió",
+          "definicion": "El ejecutivo pidió una pieza específica de documentación como último correo del hilo y el cliente nunca regresó a completarla. Abandono compartido: el cliente no volvió, pero el chase del faltante tampoco ocurrió.",
+          "definicion_ia": null
+        }
+      ],
+      "n_valores": 8
+    },
+    {
+      "id": "CAMPO-04",
+      "orden": 4,
+      "nombre": "Desenlace",
+      "seccion": "Fujo + IA",
+      "definicion_campo": "Cómo termina la oportunidad, asignado por la última señal cronológica del hilo: colocada, aprobada en firma, rechazada, el cliente declina, sale a otro producto, sigue en gestión, o la foto se corta (incierta). Cada oportunidad vive en exactamente un desenlace; los rechazos y las declinaciones no cuentan como caída, y las inciertas son invisibilidad, no abandono.",
+      "columnas_definicion": [],
+      "valores": [
+        {
+          "valor": "Colocación verificada (curse, incluye bypass por otro canal)",
+          "definicion": "El crédito se cursó y el dinero llegó al cliente, con evidencia textual en el hilo, en voz del banco o del propio cliente. Incluye colocaciones ejecutadas por otro canal (portal, app o teléfono) que dejaron confirmación escrita. El curse es irreversible y tiene la mayor precedencia entre las señales.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Aprobado, firma en tránsito",
+          "definicion": "La decisión de riesgo ya fue tomada a favor del cliente y solo queda la firma, generalmente digital en la App. Distinto de una oferta preaprobada: la preaprobación es una campaña sin solicitud; esto es una solicitud evaluada y aprobada.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "En gestión con señal de avance",
+          "definicion": "Proceso vivo al momento del corte: el caso muestra actividad real y reciente (solicitud ingresada, evaluación en curso, propuesta en análisis) sin desenlace terminal todavía. Se re-observa en la foto siguiente; nunca se fuerza a un estado final.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Rechazada por riesgo",
+          "definicion": "La solicitud fue evaluada y denegada, típicamente por carga financiera o ausencia de oferta para el perfil, y el rechazo cierra el hilo. Un rechazo seguido de una apelación viva no pertenece aquí: mientras la apelación exista, la oportunidad es incierta. No cuenta como caída: es la decisión correcta del banco.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Cliente declina o continúa por otro canal",
+          "definicion": "El cliente dijo que no con sus propias palabras: no tomará el crédito, eligió otro banco, pospuso la decisión o prefirió continuar el trámite presencial o con otro ejecutivo. Es decisión informada del cliente, no falla de gestión; no cuenta como caída.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Derivación u otro producto",
+          "definicion": "La conversación terminó siendo de otro producto (hipotecario, tarjeta de crédito) o se derivó formalmente fuera del equipo de consumo. Sale del análisis sin computar en ninguna cifra del funnel.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "Entregó documentación; sin desenlace visible",
+          "definicion": "El cliente entregó su carpeta y el hilo no muestra acuse útil, pedido de faltante ni resultado de evaluación: después de la entrega solo hay silencio o cortesías. Puede ser fuga real o resolución invisible por otro canal; el correo no permite distinguirlo. Es la subcategoría más grande del desenlace y la lista principal de cruce con los sistemas del banco.",
+          "definicion_ia": null
+        },
+        {
+          "valor": "En teléfono o evaluación; sin desenlace visible",
+          "definicion": "La gestión saltó al teléfono o quedó declarada en evaluación o comité, y el hilo no volvió a escribirse. Un proceso vivo nunca se clasifica como final: mientras la última señal sea una acción pendiente, la oportunidad permanece incierta.",
+          "definicion_ia": null
+        }
+      ],
+      "n_valores": 8
+    }
+  ],
+  "indices": {
+    "por_campo": {
+      "Origen_conversación": [
+        "Inbound",
+        "Outbond"
+      ],
+      "Tipo Apertura": [
+        "Persecución de demanda",
+        "Campañas de marketing",
+        "Cuerpo vacío / solo adjuntos",
+        "Inbound frío (conversación nueva)",
+        "Inbound continuación de conversación previa",
+        "El cliente nunca respondió al correo del banco",
+        "No Aplica"
+      ],
+      "Gestión": [
+        "Conversación neta (el cliente participa)",
+        "Caso comercial activo (entra a gestión documental)",
+        "Cliente escribió y nadie respondió (huérfana)",
+        "Intercambio tibio, murió sin abrir caso",
+        "Cotizó y nadie activó el paso siguiente",
+        "Caso abierto que se apagó sin entrega",
+        "Entregó documentos y nadie respondió jamás",
+        "Le pidieron un faltante y no volvió"
+      ],
+      "Desenlace": [
+        "Colocación verificada (curse, incluye bypass por otro canal)",
+        "Aprobado, firma en tránsito",
+        "En gestión con señal de avance",
+        "Rechazada por riesgo",
+        "Cliente declina o continúa por otro canal",
+        "Derivación u otro producto",
+        "Entregó documentación; sin desenlace visible",
+        "En teléfono o evaluación; sin desenlace visible"
+      ]
+    },
+    "por_seccion": {
+      "Flujo": [
+        "Origen_conversación"
+      ],
+      "Fujo + IA": [
+        "Tipo Apertura",
+        "Gestión",
+        "Desenlace"
+      ]
+    }
+  }
+}

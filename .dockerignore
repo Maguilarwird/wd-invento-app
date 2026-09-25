@@ -1,0 +1,23 @@
+node_modules
+dist
+dist-ssr
+.git
+.gitignore
+
+# Nunca incluir secretos en la imagen Docker
+.env
+*.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode
+.idea
+.DS_Store
+
+# Archivos de dev solo
+*.local
